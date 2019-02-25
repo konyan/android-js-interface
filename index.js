@@ -1,4 +1,4 @@
-window.androidObj = function AndroidClass(){};
+window.androidObj = function AndroidClass() {};
 
 var textContainer = document.createElement("p");
 var nativeText = document.createTextNode("Android Text");
@@ -15,7 +15,8 @@ button.innerHTML = "Send to Android";
 button.style.width = "150px";
 button.style.height = "30px";
 
-button.addEventListener ("click", function() {
+button.addEventListener("click", function() {
+  console.log("VALLL", input.value);
   window.androidObj.textToAndroid(input.value);
 });
 
@@ -25,6 +26,7 @@ document.body.appendChild(textContainer);
 document.body.appendChild(inputContainer);
 document.body.appendChild(buttonContainer);
 
-function updateFromAndroid(message){
-    nativeText.nodeValue = message;
+function updateFromAndroid(message) {
+  console.log("MEEE", message);
+  nativeText.nodeValue = message;
 }
